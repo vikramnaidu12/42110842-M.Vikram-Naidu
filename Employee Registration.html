@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 3px 10px;
+}
+body{
+    margin-left: 30px;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    padding: 10px;
+}
+.container .title{
+    font-size: 30px;
+    font-weight: 550;
+    margin-bottom: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(210, 205, 41);
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+.employee-register .int-box input{
+    height: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    width: 100%;
+}
+.employee-register .int-box select{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 2px;
+    font-size: 15px;
+}
+.employee-register .button{
+    margin-top: 20px;
+}
+.int-box{
+    border-bottom: 2px silver solid;
+    margin-bottom: 5px;
+    color: white;
+}
+.int-box label{
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease;
+    margin-bottom: 5px;
+    display: flex;
+    text-shadow: 2px 2px 5px black;
+    
+}
+.employee-register .int-box textarea{
+    background: transparent;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+.employee-register .int-box .Department{
+    margin-top: 8px;
+}
+.button input{
+    height: 45px;
+    width: 500px;
+    outline: none;
+    color:rgb(0, 0, 0);
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5rem;
+    border:2px solid transparent;
+    background: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 8px;
+}
+.button input:hover{
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+ h1{
+    margin-left: 250px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    text-shadow: 5px 5px 10px black;
+    color: rgb(255, 255, 255);
+ }
+ .int-box p{
+    text-shadow: 2px 2px 5px black;
+ }
+ .h1{
+    animation-name: infiniteupdown;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count:infinite;
+    transition: all .3s;
+ }
+ @keyframes infiniteupdown {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+ }
+</style>
+<body>
+    <form class="container">
+        <div class="title">Create an account</div>
+        <div class="employee-register">
+            <div class="int-box">
+                <label class="fullname" for="Full Name">Full name</label>
+                <input type="text" required >
+            </div>
+            <div class="int-box">
+                <div class="emailaddress">
+                 <label for="Email Address">Email Address</label>
+                 <input type="email" required>
+                </div>
+            </div>
+            <div class="int-box">
+                <label class="mobilenumber" for="Mobile Number">Mobile Number</label>
+                <input type="tel" required>
+                </div>
+            <div class="int-box">
+                    <label class="salary" for="Salary">Salary</label>
+                    <input type="number" required >
+                    </div>
+            <div class="int-box">
+                <div class="Designation">
+                    <label class="Designation" for="Designation">Designation</label>
+                    <input type="text" required >
+                    </div>
+                </div>
+            <div class="int-box">
+                <div class="Department">
+                    <select class="Department">
+                        <div class="option">
+                        <option hidden>Department</option>
+                        <option class="IT">IT</option>
+                        <option class="CSE">CSE</option>
+                        <option class="ECE">ECE</option>
+                        </div>
+                    </div>
+                    </select>
+                </div>
+                    </div>
+            <div class="int-box">
+                <div class="address">
+                <p>Address</p>
+                <textarea rows="5" cols="75" required ></textarea>
+            </div>
+            </div>
+            <div class="int-box">
+                <p>Country</p>
+                <select class="country" required>
+                    <option hidden>Country</option>
+                    <option class="INDIA">INDIA</option>
+                    <option class="USA">USA</option>
+                    <option class="ENGLAND">ENGLAND</option>
+                    <option class="GERMANY">GERMANY</option>
+                    <option class="CHINA">CHINA</option>
+                    <option class="RUSSIA">RUSSIA</option>
+                </select>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+            </div>
+            </div>
+        </div>
+    </form>
+    <h1 class="h1">Employee Registraction Form</h1>
+</body>
+</html>
